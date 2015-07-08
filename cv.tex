@@ -160,10 +160,10 @@
 % \section{publications}
 
 \ifenglish\section{publication}\else\section{publication}\fi
-\printbibsection{article}{article in peer-reviewed journal}
+\printbibsection{article}{\ifenglish articles in peer-reviewed journals\else articles de journaux révisés par les pairs\fi}
 \begin{refsection}
   \nocite{*}
-  \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
+  \printbibliography[sorting=chronological, type=inproceedings, title={\ifenglish international peer-reviewed conferences/proceedings \else articles de conférence internationale révisés par les pairs \fi}, notkeyword={france}, heading=subbibliography]
 \end{refsection}
 % \begin{refsection}
   % \nocite{*}
