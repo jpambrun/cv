@@ -1,132 +1,175 @@
 %!TEX TS-program = xelatex
 \documentclass[]{friggeri-cv}
 \addbibresource{bibliography.bib}
+\newif\ifenglish
+%\englishtrue % Show English text only
+%TODO 3 articles
 
 \begin{document}
-\header{adrien}{friggeri}
-       {social network analyst}
+
+\ifenglish
+\header{jean-françois}{pambrun}{researcher | engineer | software developer}
+\else
+\header{jean-françois}{pambrun}{chercheur | ingénieur | développeur}
+\fi
 
 
 % In the aside, each new line forces a line break
 \begin{aside}
-  \section{about}
-    31 rue Smith
-    69002 Lyon
-    France
+    \ifenglish\section{about}\else\section{à propos}\fi
+    {\small8150} rue fabre
+    montréal
+    canada
     ~
-    \href{mailto:adrien@friggeri.net}{adrien@friggeri.net}
-    \href{http://friggeri.net}{http://friggeri.net}
-    \href{http://facebook.com/adrien}{fb://adrien}
-  \section{languages}
-    bilingual french/english
-    spanish \& italian notions
-  \section{programming}
-    {\color{red} $\varheartsuit$} JavaScript
-    (ES5, node.js)
-    Python, C, OCaml
-    CSS3 \& HTML5
+    \href{mailto:jf.pambrun@gmail.com}{jf.pambrun@gmail.com}
+    \href{https://ca.linkedin.com/in/jpambrun}{linkedin://jpambrun}
+    \href{http://github.com/jpambrun}{github://jpambrun}
+    \ifenglish\section{languages}\else\section{langue}\fi
+    \ifenglish bilingual french/english \else bilingue français/anglais \fi
+    \ifenglish\section{programming}\else\section{logiciels}\fi
+    java, javascript
+    matlab, c, c{\tiny$^{++}$}
+    linux, xml, git
+    html{\small5}, latex
+    \ifenglish\section{standards}\else\section{standards}\fi
+    dicom, ihe, hl{\small7}
+    jpeg {\small2000}, jpip
 \end{aside}
 
-\section{interests}
+% \section{interests}
 
-complex networks, social networks, community detection, community structure,
-overlapping communities, information diffusion, viral marketing, social
-inference, recommendation, data mining
+% complex networks, social networks, community detection, community structure,
+% overlapping communities, information diffusion, viral marketing, social
+% inference, recommendation, data mining
 
-\section{education}
-
-\begin{entrylist}
-  \entry
-    {since 2009}
-    {Ph.D. {\normalfont candidate in Computer Science}}
-    {DNET/INRIA, LIP/ÉNS de Lyon}
-    {\emph{A Quantified Theory of Social Cohesion.}}
-  \entry
-    {2007–2008}
-    {M.Sc. magna cum laude}
-    {IXXI, École Normale Supérieure de Lyon}
-    {Majoring in Computer Science\\
-    Specialization in Complex Systems}
-  \entry
-    {2006–2007}
-    {B.Sc. magna cum laude}
-    {École Normale Supérieure de Lyon}
-    {Majoring in Computer Science}
-  \entry
-    {2003–2006}
-    {Classes Préparatoires aux Grandes Écoles}
-    {Lycée Fénelon, Lycée Louis le Grand, Paris}
-    {Preparation for national competitive entrance exams to leading French ``grandes écoles'', specializing in mathematics and physics.}
-  \entry
-    {2003}
-    {French Baccalauréat S. with honors}
-    {Lycée Louis le Grand, Paris}
-    {Specialization in mathematics and physics}
-\end{entrylist}
-
-\section{experience}
+\ifenglish\section{education}\else\section{éducation}\fi
 
 \begin{entrylist}
-  \entry
-    {02–07 2009}
-    {LIP6/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Visualization of complex networks.}}
-  \entry
-    {06–08 2008}
-    {ISCPIF/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Diffusion in the Blogosphere. Happy Flu.}}
-  \entry
-    {06–08 2007}
-    {LIP6/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Kernels in real world networks.}}
-  \entry
-    {07–08 2005}
-    {\href{http://www.kelkoo.com}{Kelkoo.com}}
-    {Summer job.}
-    {\emph{Creation of a keyword generator for Google Adwords.}}
-  \entry
-    {07–08 2004}
-    {\href{http://www.monsieurprix.com}{MonsieurPrix.com}}
-    {Summer job.}
-    {\emph{Development of an e-commerce product indexation spider.}}
+  \ifenglish
+    \entry {since 2011} {Ph.D. in electrical engineering} {École de technologie supérieure} {\emph{TODO}}
+  \else
+    \entry {depuis 2011} {Ph.D. en génie électrique (en cours)} {École de technologie supérieure} {\emph{Optimisation de la compression et de la transmission d'images médicales.}}
+  \fi
+
+  \ifenglish
+    \entry {2009-2010} {M.Sc. in electrical engineering (incomplete)} {École de technologie supérieure} {\emph{TODO}}
+  \else
+    \entry {2009-2010} {M.Sc. en génie électrique (passage direct)} {École de technologie supérieure} {\emph{Évaluation des pertes liées à la compression d'images médicales.}}
+  \fi
+
+  \ifenglish
+    \entry {2005-2009} {B.ing. in electrical engineering} {École de technologie supérieure} {\emph{TODO}}
+  \else
+    \entry {2005-2009} {B.ing. en génie électrique} {École de technologie supérieure} {\emph{Concentration technologie de l'information et télécommunications.}}
+  \fi
+
+  \ifenglish
+    \entry {2001-2005} {B.ing. in electrical engineering} {École de technologie supérieure} {\emph{TODO}}
+  \else
+    \entry {2001-2005} {DEC en technologie de systèmes ordinés} {Cégep de l’Outaouais} {}
+  \fi
 \end{entrylist}
 
-\section{applications}
+
+% \cventry{2008--2009}{Concepteur de matériel didactique}{École de technologie supérieure}{}{}{
+% Responsable de l’élaboration des exercices et des outils nécessaires au bon déroulement des laboratoires du cours Systèmes répartis dans le domaine de la santé ((gts\footnotesize840})).
+% \begin{itemize}
+%   \item Assembler/développer des logiciels de type clients/serveurs suivant les spécifications et standards HL7 et DICOM pour les dossiers patients
+%   \item Concevoir, créer et mettre au point les énoncés de laboratoire et les méthodes nécessaires à l’évaluation des étudiants
+% \end{itemize}}
+
+\ifenglish\section{experience}\else\section{expérience}\fi
 
 \begin{entrylist}
-  \entry
-    {2012}
-    {Who did I forget ?}
-    {\href{http://whodidiforget.com}{whodidiforget.com}}
-    {Guest list recommendation for Facebook events based on friends already attending the event.}
-  \entry
-    {2011}
-    {Fellows}
-    {\href{http://fellows-exp.com}{fellows-exp.com}}
-    {Automatic community detection among Facebook Friends in order to validate the \emph{cohesion} measure, creation of friend lists.}
-  \entry
-    {2008}
-    {Happy Flu}
-    {\href{http://happyflu.com}{happyflu.com}}
-    {Experiment aimed to measure viral spreading of content across the blogosphere.}
+  \ifenglish
+    \entry {2009-2014} {chargé de cours} {École de technologie supérieure} {\emph{Environnement de développement de logiciels (ele{\footnotesize116})\\Analyse et traitement d'images (ele{\footnotesize747})}}
+  \else
+    \entry {2009-2014} {chargé de cours} {École de technologie supérieure} {\emph{Environnement de développement de logiciels (ele{\footnotesize116})\\Analyse et traitement d'images (ele{\footnotesize747})}}
+  \fi
+
+  \ifenglish
+    \entry {2009-2014} {chargé de laboratoires} {École de technologie supérieure} {\emph{Systèmes répartis dans le domaine de la santé (gts{\footnotesize840})\\Environnement de développement de logiciels (ele{\footnotesize116})\\Analyse et traitement d'images (ele{\footnotesize747})}}
+  \else
+    \entry {2009-2014} {chargé de laboratoires} {École de technologie supérieure} {\emph{Systèmes répartis dans le domaine de la santé (gts{\footnotesize840})\\Environnement de développement de logiciels (ele{\footnotesize116})\\Analyse et traitement d'images (ele{\footnotesize747})}}
+  \fi
+
+  \ifenglish
+    \entry {2009} {développeur logiciel} {CAE inc.} {\emph{Simulation d'affichage tête haute pour simulateur de vol militaire}}
+  \else
+    \entry {2009} {développeur logiciel} {CAE inc.} {\emph{Simulation d'affichage tête haute pour simulateur de vol militaire}}
+  \fi
+
+  \ifenglish
+    \entry {2006-2008} {auxiliaire de recherche} {École de technologie supérieure} {\emph{Développement d'un outils de validation de conformité au standard hl{\small7}v{\small3}.\\Implémentation et évaluation d'un système de <<streaming>> d'image médicales}}
+  \else
+    \entry {2006-2008} {auxiliaire de recherche} {École de technologie supérieure} {\emph{Développement d'un outils de validation de conformité au standard hl{\small7}v{\small3}.\\Implémentation et évaluation d'un système de <<streaming>> d'image médicales}}
+  \fi
 \end{entrylist}
 
-\section{publications}
+\ifenglish\section{awards}\else\section{récompenses}\fi
 
+\begin{entrylist}
+  \ifenglish
+    \entry {2014} {best scientific poster at the annual SIIM meeting} {500\$} {\vspace{-3mm}}
+  \else
+    \entry {2014} {meilleur affiche scientifique à la rencontre annuelle SIIM 2014} {500\$} {\vspace{-3mm}}
+  \fi
+  \ifenglish
+    \entry {2011} {bourse d’études supérieures Alexander-Graham-Bell du CRSNG} {35,000\$/an} {\vspace{-3mm}}
+  \else
+    \entry {2011} {bourse d’études supérieures Alexander-Graham-Bell du CRSNG} {35,000\$/an} {\vspace{-3mm}}
+  \fi
+  \ifenglish
+    \entry {2011} {bourse d'excellence pour les diplômés de 1er cycle de l'ÉTS} {20,000\$/an} {\vspace{-3mm}}
+  \else
+    \entry {2011} {bourse d'excellence pour les diplômés de 1er cycle de l'ÉTS} {20,000\$/an} {\vspace{-3mm}}
+  \fi
+  \ifenglish
+    \entry {2011} {bourse de doctorat en recherche du FQRNT} {20,000\$/an} {\vspace{-3mm}}
+  \else
+    \entry {2011} {bourse de doctorat en recherche du FQRNT} {20,000\$/an} {\vspace{-3mm}}
+  \fi
+  \ifenglish
+    \entry {2009} {bourse de maîtrise en recherche du FQRNT} {15,000\$/an} {\vspace{-3mm}}
+  \else
+    \entry {2009} {bourse de maîtrise en recherche du FQRNT} {15,000\$/an} {\vspace{-3mm}}
+  \fi
+  \ifenglish
+    \entry {2006} {bourse de maîtrise en recherche du FQRNT} {4,500\$} {\vspace{-3mm}}
+  \else
+    \entry {2006} {bourse de maîtrise en recherche du FQRNT} {4,500\$} {\vspace{-3mm}}
+  \fi
+\end{entrylist}
 
+\ifenglish\section{implication bénévole}\else\section{implication bénévole}\fi
+\begin{entrylist}
+  \ifenglish
+    \entry {depuis 2013} {administrateur d'un OBNL} {Association étudiante de l'ÉTS} {vice-président aux services\\représentant étudiant à la commission des études}
+  \else
+    \entry {depuis 2013} {administrateur d'un OBNL} {Association étudiante de l'ÉTS} {vice-président aux services\\représentant étudiant à la commission des études}
+  \fi
+\end{entrylist}
+\newpage
+% \section{bourses et récompenses}
+% \cventry{2011}{\small bourse d’études supérieures Alexander-Graham-Bell du CRSNG}{35,000\$/an}{}{}{
+% La prestigieuse bourse d’études supérieures du Canada (BESC) Alexander-Graham-Bell a été créée afin d’assurer un bassin fiable de personnes hautement qualifiées en vue de satisfaire aux besoins de l’économie du savoir du Canada. Les titulaires d’une BESC Alexander-Graham-Bell aideront à renouveler le corps professoral des universités canadiennes et seront les chefs de file de demain en recherche.}
+% \cventry{2011}{\small bourse d’excellence pour les diplômés de 1er cycle de l’ÉTS}{20,000\$/an}{}{}{}
+% \cventry{2011}{\small bourse de doctorat en recherche du FQRNT}{20,000\$/an}{}{}{}
+% \cventry{2009}{\small bourse de maîtrise en recherche du FQRNT}{15,000\$/an}{}{}{}
+% \cventry{2006}{\small bourse de recherche de 1er cycle du CRSNG}{4,500\$}{}{}{}
+% \section{publications}
+
+\ifenglish\section{publication}\else\section{publication}\fi
 \printbibsection{article}{article in peer-reviewed journal}
 \begin{refsection}
   \nocite{*}
   \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
 \end{refsection}
-\begin{refsection}
-  \nocite{*}
-  \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
-\end{refsection}
-\printbibsection{misc}{other publications}
-\printbibsection{report}{research reports}
+% \begin{refsection}
+  % \nocite{*}
+  % \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
+% \end{refsection}
+% \printbibsection{misc}{other publications}
+%\printbibsection{report}{rapport technique}
 
 \end{document}

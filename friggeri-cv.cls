@@ -46,17 +46,18 @@
 % Fonts %
 %%%%%%%%%
 
-\RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage{lato}
+\usepackage{microtype}
+\usepackage{textcomp}
 
-\newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
-\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
-
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
-
-\setmathfont{XITS Math}
+\newcommand{\bodyfont}[0]{\usefont{T1}{fla}{m}{n}}
+\newcommand{\thinfont}[0]{\color{red}\usefont{T1}{fla}{l}{n}}
+\newcommand{\headingfont}[0]{\usefont{T1}{fla}{eb}{n}}
+\renewcommand{\seriesdefault}{l}
+\renewcommand{\rmdefault}{fla}
 
 %%%%%%%%%%
 % Header %
@@ -78,8 +79,7 @@
       {\thinfont #1}{\bodyfont  #2}
     };
     \node [anchor=north] at (name.south) {%
-      \fontsize{14pt}{24pt}\color{header}%
-      \thinfont #3%
+       \rolefont #3%
     };
   \end{tikzpicture}
   \vspace{2.5cm}
@@ -141,7 +141,7 @@
   #1&\parbox[t]{11.8cm}{%
     \textbf{#2}%
     \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+    {\footnotesize\color{lightgray} #3}\\%
     #4\vspace{\parsep}%
   }\\}
 
@@ -186,8 +186,8 @@
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \usebibmacro{journal+issuetitle}%
+    \footnotesize\color{lightgray}\itshape%
+    \usebibmacro{journal}%
     \setunit{\space}%
     \printfield{pages}%
     \newunit%
@@ -206,7 +206,7 @@
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}%
+    \footnotesize\color{lightgray}%
     \printfield{booktitle}%
     \setunit{\addcomma\space}%
     \printfield{year}%
@@ -224,7 +224,7 @@
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+    \footnotesize\color{lightgray}\itshape%
     \printfield{booktitle}%
     \setunit*{\addcomma\space}%
     \printfield{note}%
@@ -244,7 +244,7 @@
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+    \footnotesize\color{lightgray}\itshape%
     \printfield{type}%
     \setunit{\space}%
     \printfield{number}%
@@ -256,7 +256,7 @@
 }
 
 \DeclareNameFormat{author}{%
-  \small\addfontfeature{Color=lightgray}%
+  \small\color{lightgray}%
   \ifblank{#3}{}{#3\space}#1%
   \ifthenelse{\value{listcount}<\value{liststop}}
     {\addcomma\space}
