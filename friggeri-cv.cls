@@ -19,13 +19,13 @@
 
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
-\definecolor{lightgray}{HTML}{999999}
+\definecolor{lightgray}{HTML}{858585}
 
-\definecolor{green}{HTML}{C2E15F}
-\definecolor{orange}{HTML}{FDA333}
-\definecolor{purple}{HTML}{D3A4F9}
-\definecolor{red}{HTML}{FB4485}
-\definecolor{blue}{HTML}{6CE0F1}
+\definecolor{green}{HTML}{998F1E}
+\definecolor{orange}{HTML}{FD9726}
+\definecolor{purple}{HTML}{8A60AC}
+\definecolor{red}{HTML}{D42A66}
+\definecolor{blue}{HTML}{14A7CC}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -47,11 +47,11 @@
 %%%%%%%%%
 
 %\usepackage[T1]{fontenc}
-\usepackage{fontspec}
-\usepackage[utf8]{inputenc}
-\usepackage{lato}
-\usepackage{microtype}
-\usepackage{textcomp}
+\RequirePackage{fontspec}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lato}
+\RequirePackage{microtype}
+\RequirePackage{textcomp}
 
 \newcommand{\bodyfont}[0]{\usefont{T1}{fla}{m}{n}}
 \newcommand{\thinfont}[0]{\color{red}\usefont{T1}{fla}{l}{n}}
@@ -68,7 +68,12 @@
 \newcommand{\rolefont}{%
   \fontsize{14pt}{24pt}\selectfont%
   \thinfont%
-  \color{white}%
+  \ifdefined\@cv@print
+    \color{darkgray}%
+  \else
+    \color{white}%
+  \fi
+  \selectfont
 }
 
 \newcommand{\header}[3]{%
@@ -138,7 +143,7 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
+  {\small#1}&\parbox[t]{11.8cm}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize\color{lightgray} #3}\\%
