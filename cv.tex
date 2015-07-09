@@ -1,24 +1,29 @@
 %!TEX TS-program = xelatex
-\documentclass[]{friggeri-cv}
+%\def\isenglish{1}
+%\def\isprint{1}
+
+\ifdefined\isprint
+  \documentclass[print]{friggeri-cv}
+\else
+  \documentclass[]{friggeri-cv}
+\fi
 \addbibresource{bibliography.bib}
-\newif\ifenglish
-\englishtrue % Show English text only
 %TODO 3 articles
 
 \begin{document}
 
-\ifenglish
+\ifdefined\isenglish
 \header{jean-françois}{pambrun}{researcher | engineer | software developer}
 \else
 \header{jean-françois}{pambrun}{chercheur | ingénieur | développeur}
 \fi
 
 
+
 % In the aside, each new line forces a line break
 \begin{aside}
-    \ifenglish\section{about}\else\section{à propos}\fi
+    \ifdefined\isenglish\section{about}\else\section{à propos}\fi
     {\small(514) 222-2085}
-    ~
     {\small8150} rue fabre
     montréal
     canada
@@ -26,14 +31,14 @@
     \href{mailto:jf.pambrun@gmail.com}{jf.pambrun@gmail.com}
     \href{https://ca.linkedin.com/in/jpambrun}{linkedin://jpambrun}
     \href{http://github.com/jpambrun}{github://jpambrun}
-    \ifenglish\section{languages}\else\section{langue}\fi
-    \ifenglish bilingual french/english \else bilingue français/anglais \fi
-    \ifenglish\section{programming}\else\section{logiciels}\fi
+    \ifdefined\isenglish\section{languages}\else\section{langue}\fi
+    \ifdefined\isenglish bilingual french/english \else bilingue français/anglais \fi
+    \ifdefined\isenglish\section{programming}\else\section{logiciels}\fi
     java, javascript
     matlab, c, c{\tiny$^{++}$}
     linux, xml, git
     html{\small5}, latex
-    \ifenglish\section{standards}\else\section{standards}\fi
+    \ifdefined\isenglish\section{standards}\else\section{standards}\fi
     dicom, ihe, hl{\small7}
     jpeg {\small2000}, jpip
 \end{aside}
@@ -44,28 +49,28 @@
 % overlapping communities, information diffusion, viral marketing, social
 % inference, recommendation, data mining
 
-\ifenglish\section{education}\else\section{éducation}\fi
+\ifdefined\isenglish\section{education}\else\section{éducation}\fi
 
 \begin{entrylist}
-  \ifenglish
-    \entry {since 2011} {Ph.D. in electrical engineering} {École de technologie supérieure} {\emph{Medical image compression and transmission optimization.}}
+  \ifdefined\isenglish
+    \entry {since 2011} {Ph.D. in electrical engineering (in progress)} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{improving medical image compression and transmission}}
   \else
-    \entry {depuis 2011} {Ph.D. en génie électrique (en cours)} {École de technologie supérieure} {\emph{Optimisation de la compression et de la transmission d'images médicales.}}
+    \entry {depuis 2011} {Ph.D. en génie électrique (en cours)} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{optimisation de la compression et de la transmission d'images médicales}}
   \fi
 
-  \ifenglish
-    \entry {2009-2010} {M.Sc. in electrical engineering (incomplete)} {École de technologie supérieure} {\emph{Evaluation of the diagnostic quality of lossy compressed images.}}
+  \ifdefined\isenglish
+    \entry {2009-2010} {M.Sc. in electrical engineering (fast-track)} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{evaluating the diagnostic quality of lossy compressed images}}
   \else
-    \entry {2009-2010} {M.Sc. en génie électrique (passage direct)} {École de technologie supérieure} {\emph{Évaluation des pertes liées à la compression d'images médicales.}}
+    \entry {2009-2010} {M.Sc. en génie électrique (passage acéléré)} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{évaluation des pertes liées à la compression d'images médicales}}
   \fi
 
-  \ifenglish
-    \entry {2005-2009} {B.ing. in electrical engineering} {École de technologie supérieure} {\emph{Specialization in information technologies and telecommunication.}}
+  \ifdefined\isenglish
+    \entry {2005-2009} {B.ing. in electrical engineering} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{information technologies and telecommunication specialization}}
   \else
-    \entry {2005-2009} {B.ing. en génie électrique} {École de technologie supérieure} {\emph{Concentration technologie de l'information et télécommunications.}}
+    \entry {2005-2009} {B.ing. en génie électrique} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{concentration technologie de l'information et télécommunications}}
   \fi
 
-  \ifenglish
+  \ifdefined\isenglish
     \entry {2001-2005} {DEC in computerized systems technology} {Cégep de l’Outaouais} {}
   \else
     \entry {2001-2005} {DEC en technologie de systèmes ordinés} {Cégep de l’Outaouais} {}
@@ -80,92 +85,92 @@
 %   \item Concevoir, créer et mettre au point les énoncés de laboratoire et les méthodes nécessaires à l’évaluation des étudiants
 % \end{itemize}}
 
-\ifenglish\section{experience}\else\section{expérience}\fi
+\ifdefined\isenglish\section{experience}\else\section{expérience}\fi
 
 \begin{entrylist}
-  \ifenglish
-    \entry {2009-2014} {lecturer} {École de technologie supérieure} {\emph{software development environment (ele{\footnotesize116})\\image processing and analysis (ele{\footnotesize747})}}
+  \ifdefined\isenglish
+    \entry {2009-2014} {lecturer} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{software development environment (ele{\footnotesize116})\\image processing and analysis (ele{\footnotesize747})}}
   \else
-    \entry {2009-2014} {chargé de cours} {École de technologie supérieure} {\emph{environnement de développement de logiciels (ele{\footnotesize116})\\analyse et traitement d'images (ele{\footnotesize747})}}
+    \entry {2009-2014} {chargé de cours} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{environnement de développement de logiciels (ele{\footnotesize116})\\analyse et traitement d'images (ele{\footnotesize747})}}
   \fi
 
-  \ifenglish
-    \entry {2009-2014} {teaching assistants} {École de technologie supérieure} {\emph{healthcare distributed systems (gts{\footnotesize840})\\software development environment (ele{\footnotesize116})\\image processing and analysis (ele{\footnotesize747})}}
+  \ifdefined\isenglish
+    \entry {2009-2014} {teaching assistants} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{healthcare distributed systems (gts{\footnotesize840})\\software development environment (ele{\footnotesize116})\\image processing and analysis (ele{\footnotesize747})}}
   \else
-    \entry {2009-2014} {chargé de laboratoires} {École de technologie supérieure} {\emph{systèmes répartis dans le domaine de la santé (gts{\footnotesize840})\\environnement de développement de logiciels (ele{\footnotesize116})\\analyse et traitement d'images (ele{\footnotesize747})}}
+    \entry {2009-2014} {chargé de laboratoires} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{systèmes répartis dans le domaine de la santé (gts{\footnotesize840})\\environnement de développement de logiciels (ele{\footnotesize116})\\analyse et traitement d'images (ele{\footnotesize747})}}
   \fi
 
-  \ifenglish
-    \entry {2009} {software developer} {CAE inc.} {\emph{head-up display simulation for military flight simulators.}}
+  \ifdefined\isenglish
+    \entry {01-09 2009} {software developer} {\scriptsize{CAE} inc.} {\emph{head-up display simulation for military flight simulators}}
   \else
-    \entry {2009} {développeur logiciel} {CAE inc.} {\emph{simulation d'affichage tête haute pour simulateurs de vol militaire.}}
+    \entry {01-09 2009} {développeur logiciel} {\scriptsize{CAE} inc.} {\emph{simulation d'affichage tête haute pour simulateurs de vol militaire.}}
   \fi
 
-  \ifenglish
-    \entry {2006-2008} {research assistant} {École de technologie supérieure} {\emph{development standard compliance tool for hl{\small7}v{\small3}.\\implementation and evaluation of a medical image streaming software.}}
+  \ifdefined\isenglish
+    \entry {2006-2008} {research assistant} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{implementation of a standard compliance validation tool for hl{\small7}v{\small3}\\implementation and evaluation of a medical image streaming platform}}
   \else
-    \entry {2006-2008} {auxiliaire de recherche} {École de technologie supérieure} {\emph{développement d'un outils de validation de conformité au standard hl{\small7}v{\small3}.\\Implémentation et évaluation d'un système de <<streaming>> d'image médicales.}}
+    \entry {2006-2008} {auxiliaire de recherche} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{développement d'un outils de validation de conformité au standard hl{\small7}v{\small3}.\\Implémentation et évaluation d'un système de <<streaming>> d'image médicales.}}
   \fi
 \end{entrylist}
 
-\ifenglish\section{awards}\else\section{récompenses}\fi
+\ifdefined\isenglish\section{awards}\else\section{récompenses}\fi
 
 \begin{entrylist}
-  \ifenglish
-    \entry {2014} {best scientific poster at the annual \textsc{siim} meeting} {500\$} {\vspace{-3mm}}
+  \ifdefined\isenglish
+    \entry {2014} {{\small SIIM} annual meeting best scientific poster} {500\$} {\vspace{-3mm}}
   \else
-    \entry {2014} {meilleur affiche scientifique à la rencontre annuelle \textsc{siim} 2014} {500\$} {\vspace{-3mm}}
+    \entry {2014} {meilleur affiche scientifique à la conférence annuelle {\small SIIM}} {500\$} {\vspace{-3mm}}
   \fi
-  \ifenglish
-    \entry {2011} {\textsc{crsng} doctoral Alexander-Graham-Bell scholarship} {35,000\$/an} {\vspace{-3mm}}
+  \ifdefined\isenglish
+    \entry {2011} {{\small NSERC} doctoral Alexander-Graham-Bell scholarship} {35,000\$/yr} {\vspace{-3mm}}
   \else
-    \entry {2011} {bourse d’études supérieures Alexander-Graham-Bell du \textsc{crsng}} {35,000\$/an} {\vspace{-3mm}}
+    \entry {2011} {bourse d’études supérieures Alexander-Graham-Bell du {\small CRSNG}} {35,000\$/an} {\vspace{-3mm}}
   \fi
-  \ifenglish
-    \entry {2011} {excellence scholarship for graduate student of the ÉTS} {20,000\$/an} {\vspace{-3mm}}
+  \ifdefined\isenglish
+    \entry {2011} {{\small ÉTS} excellence graduate student scholarship} {20,000\$/yr} {\vspace{-3mm}}
   \else
     \entry {2011} {bourse d'excellence pour les diplômés de 1er cycle de l'ÉTS} {20,000\$/an} {\vspace{-3mm}}
   \fi
-  \ifenglish
-    \entry {2011} {\textsc{fqrnt} doctoral research scholarship} {20,000\$/an} {\vspace{-3mm}}
+  \ifdefined\isenglish
+    \entry {2011} {{\small FRQNT} doctoral research scholarship} {20,000\$/yr} {\vspace{-3mm}}
   \else
-    \entry {2011} {bourse de doctorat en recherche du \textsc{fqrnt}} {20,000\$/an} {\vspace{-3mm}}
+    \entry {2011} {bourse de doctorat en recherche du {\small FRQNT}} {20,000\$/an} {\vspace{-3mm}}
   \fi
-  \ifenglish
-    \entry {2009} {\textsc{fqrnt} master's research scholarship} {15,000\$/an} {\vspace{-3mm}}
+  \ifdefined\isenglish
+    \entry {2009} {{\small FRQNT} master's research scholarship} {15,000\$/yr} {\vspace{-3mm}}
   \else
-    \entry {2009} {bourse de maîtrise en recherche du \textsc{fqrnt}} {15,000\$/an} {\vspace{-3mm}}
+    \entry {2009} {bourse de maîtrise en recherche du {\small FRQNT}} {15,000\$/an} {\vspace{-3mm}}
   \fi
-  \ifenglish
-    \entry {2006} {\textsc{crsng}  undergraduate student research awards} {4,500\$} {\vspace{-3mm}}
+  \ifdefined\isenglish
+    \entry {2006} {{\small NSERC} undergraduate student research awards} {4,500\$} {\vspace{-3mm}}
   \else
-    \entry {2006} {bourse de recherche de 1er cycle du \textsc{crsng}} {4,500\$} {\vspace{-3mm}}
+    \entry {2006} {bourse de recherche de 1er cycle du {\small CRSNG}} {4,500\$} {\vspace{-3mm}}
   \fi
 \end{entrylist}
 
-\ifenglish\section{implication bénévole}\else\section{implication bénévole}\fi
+\ifdefined\isenglish\section{implication bénévole}\else\section{implication bénévole}\fi
 \begin{entrylist}
-  \ifenglish
-    \entry {depuis 2013} {administrateur d'un \textsc{obnl}} {Association étudiante de l'ÉTS} {vice-président aux services\\représentant étudiant à la commission des études}
+  \ifdefined\isenglish
+    \entry {depuis 2013} {{\small NPO} board member} {Association étudiante de l'{\scriptsize ÉTS}} {vice-president of services\\ academic commission student representative \\ disciplinary committee student representative}
   \else
-    \entry {depuis 2013} {administrateur d'un \textsc{obnl}} {Association étudiante de l'ÉTS} {vice-président aux services\\représentant étudiant à la commission des études}
+    \entry {depuis 2013} {administrateur d'un {\small OBNL}} {Association étudiante de l'{\scriptsize ÉTS}} {vice-président aux services\\représentant étudiant à la commission des études\\représentant étudiant au comité de discipline}
   \fi
 \end{entrylist}
 \newpage
 % \section{bourses et récompenses}
-% \cventry{2011}{\small bourse d’études supérieures Alexander-Graham-Bell du \textsc{crsng}}{35,000\$/an}{}{}{
+% \cventry{2011}{\small bourse d’études supérieures Alexander-Graham-Bell du {\small CRSNG}{35,000\$/an}{}{}{
 % La prestigieuse bourse d’études supérieures du Canada (BESC) Alexander-Graham-Bell a été créée afin d’assurer un bassin fiable de personnes hautement qualifiées en vue de satisfaire aux besoins de l’économie du savoir du Canada. Les titulaires d’une BESC Alexander-Graham-Bell aideront à renouveler le corps professoral des universités canadiennes et seront les chefs de file de demain en recherche.}
 % \cventry{2011}{\small bourse d’excellence pour les diplômés de 1er cycle de l’\textsc{éts}}{20,000\$/an}{}{}{}
-% \cventry{2011}{\small bourse de doctorat en recherche du \textsc{fqrnt}}{20,000\$/an}{}{}{}
-% \cventry{2009}{\small bourse de maîtrise en recherche du \textsc{fqrnt}}{15,000\$/an}{}{}{}
-% \cventry{2006}{\small bourse de recherche de 1er cycle du \textsc{crsng}}{4,500\$}{}{}{}
+% \cventry{2011}{\small bourse de doctorat en recherche du {\small FRQNT}}{20,000\$/an}{}{}{}
+% \cventry{2009}{\small bourse de maîtrise en recherche du {\small FRQNT}}{15,000\$/an}{}{}{}
+% \cventry{2006}{\small bourse de recherche de 1er cycle du {\small CRSNG}{4,500\$}{}{}{}
 % \section{publications}
 
-\ifenglish\section{publication}\else\section{publication}\fi
-\printbibsection{article}{\ifenglish articles in peer-reviewed journals\else articles de journaux révisés par les pairs\fi}
+\ifdefined\isenglish\section{publication}\else\section{publication}\fi
+\printbibsection{article}{\ifdefined\isenglish articles in peer-reviewed journals\else articles de journaux évalués par les pairs\fi}
 \begin{refsection}
   \nocite{*}
-  \printbibliography[sorting=chronological, type=inproceedings, title={\ifenglish international peer-reviewed conferences/proceedings \else articles de conférence internationale révisés par les pairs \fi}, notkeyword={france}, heading=subbibliography]
+  \printbibliography[sorting=chronological, type=inproceedings, title={\ifdefined\isenglish international peer-reviewed conferences/proceedings \else articles de conférence internationale évalué par les pairs \fi}, notkeyword={france}, heading=subbibliography]
 \end{refsection}
 % \begin{refsection}
   % \nocite{*}

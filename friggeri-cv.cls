@@ -53,12 +53,14 @@
 \RequirePackage{microtype}
 \RequirePackage{textcomp}
 
+\DeclareTextCommandDefault{\nobreakspace}{\leavevmode\nobreak\ }
+
 \newcommand{\bodyfont}[0]{\usefont{T1}{fla}{b}{n}}
 \newcommand{\thinfont}[0]{\color{red}\usefont{T1}{fla}{l}{n}}
 \newcommand{\headingfont}[0]{\usefont{T1}{fla}{eb}{n}}
 \renewcommand{\seriesdefault}{l}
 \renewcommand{\rmdefault}{fla}
-
+\renewcommand{\encodingdefault}{T1}
 %%%%%%%%%%
 % Header %
 %%%%%%%%%%
