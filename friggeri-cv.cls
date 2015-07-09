@@ -53,7 +53,7 @@
 \RequirePackage{microtype}
 \RequirePackage{textcomp}
 
-\newcommand{\bodyfont}[0]{\usefont{T1}{fla}{m}{n}}
+\newcommand{\bodyfont}[0]{\usefont{T1}{fla}{b}{n}}
 \newcommand{\thinfont}[0]{\color{red}\usefont{T1}{fla}{l}{n}}
 \newcommand{\headingfont}[0]{\usefont{T1}{fla}{eb}{n}}
 \renewcommand{\seriesdefault}{l}
