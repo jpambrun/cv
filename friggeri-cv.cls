@@ -21,7 +21,7 @@
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{858585}
 
-\definecolor{green}{HTML}{998F1E}
+\definecolor{green}{HTML}{A6B01A}
 \definecolor{orange}{HTML}{FD9726}
 \definecolor{purple}{HTML}{8A60AC}
 \definecolor{red}{HTML}{D42A66}
