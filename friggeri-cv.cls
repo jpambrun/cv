@@ -8,6 +8,12 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
+\RequirePackage[absolute,overlay]{textpos}
+
+%%%%%%%%%%%%
+% Language %
+%%%%%%%%%%%%
+\newcommand{\engfr}[2]{\ifdefined\isenglish #1 \else #2 \fi}
 
 %%%%%%%%%%
 % Colors %
@@ -157,7 +163,6 @@
 % Side block %
 %%%%%%%%%%%%%%
 
-\RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
 \newenvironment{aside}{%
@@ -175,6 +180,18 @@
   \let\section\oldsection
 }
 
+%%%%%%%%%%%%%%
+% footnotes  %
+%%%%%%%%%%%%%%
+
+\newenvironment{cvfootnote}{%
+  \begin{textblock}{7}(6.1, 25)
+%  \obeycr
+  \scriptsize\color{lightgray}
+}{%
+%  \restorecr
+  \end{textblock}
+}
 %%%%%%%%%%%%%%%%
 % Bibliography %
 %%%%%%%%%%%%%%%%
@@ -288,5 +305,5 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=6.1cm,top=2cm,right=1.4cm,bottom=1.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
