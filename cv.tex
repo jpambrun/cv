@@ -9,7 +9,10 @@
 \fi
 \addbibresource{bibliography.bib}
 %TODO 3 articles
-
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 \begin{document}
 
 \engfr{
@@ -25,7 +28,7 @@
 %    \ifdefined\isenglish\section{about}\else\section{à propos}\fi
   \section{\engfr{about}{à propos}}
   {\small(514) 222-2085}
-  {\small8150} rue fabre
+  {\small8150} fabre
   montréal
   canada
   ~
@@ -45,7 +48,7 @@
 \end{aside}
 
 \begin{cvfootnote}
-  \engfr{\textdagger~ not a member of the OIQ\\\textdaggerdbl~ allows doctoral  admission without obtaining the master's degree }{\textdagger~ pas membre de l'OIQ\\\textdaggerdbl~ permet le passage au doctorat sans obtenir le grade de maîtrise}
+  \engfr{\textdagger~ not a member of the OIQ\\\textdaggerdbl~ allows doctoral  admission without obtaining the master's degree }{\textdagger~ non membre de l'OIQ\\\textdaggerdbl~ permet le passage au doctorat sans obtenir le grade de maîtrise}
 \end{cvfootnote}
 % \section{interests}
 
@@ -65,12 +68,12 @@
   {\entry {2009-2010} {M.Sc. en génie électrique (passage acéléré\textsuperscript{\tiny\textdaggerdbl})} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{évaluation des pertes liées à la compression d'images médicales}}}
 
   \engfr
-  {\entry {2005-2009} {B.ing. in electrical engineering} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{information technologies and telecommunication specialization}}}
+  {\entry {2005-2009} {B.ing. in electrical engineering} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{information technologies and telecommunication}}}
   {\entry {2005-2009} {B.ing. en génie électrique} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{concentration technologie de l'information et télécommunications}}}
 
   \engfr
-  {\entry {2001-2005} {DEC in computerized systems technology} {Cégep de l’Outaouais} {}}
-  {\entry {2001-2005} {DEC en technologie de systèmes ordinés} {Cégep de l’Outaouais} {}}
+  {\entry {2001-2005} {Diploma of college studies in electrical engineering} {Cégep de l’Outaouais} {\emph{computerized system technologies}}}
+  {\entry {2001-2005} {Diplôme d'études collégiales en génie électrique} {Cégep de l’Outaouais} {\emph{concentration technologie de systèmes ordinés}}}
 \end{entrylist}
 
 
@@ -151,7 +154,7 @@
 \printbibsection{article}{\ifdefined\isenglish articles in peer-reviewed journals\else articles de journaux évalués par les pairs\fi}
 \begin{refsection}
   \nocite{*}
-  \printbibliography[sorting=chronological, type=inproceedings, title={\ifdefined\isenglish international peer-reviewed conferences/proceedings \else articles de conférence internationale évalué par les pairs \fi}, notkeyword={france}, heading=subbibliography]
+  \printbibliography[sorting=chronological, type=inproceedings, title={\ifdefined\isenglish international peer-reviewed conferences/proceedings \else articles de conférences internationales évalués par les pairs \fi}, notkeyword={france}, heading=subbibliography]
 \end{refsection}
 % \begin{refsection}
   % \nocite{*}
