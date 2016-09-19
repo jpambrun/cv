@@ -3,6 +3,8 @@ Latest version of my CV.
 
 Uses TikZ for the header and biblatex to print my publications and textpos for the aside.
 
+Requires biber
+
 # License
 
 Copyright (C) 2012, Adrien Friggeri

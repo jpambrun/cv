@@ -196,7 +196,7 @@
 % Bibliography %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[style=verbose, maxnames=99, sorting=ydnt]{biblatex}
+\RequirePackage[style=verbose, maxnames=99, sorting=ynt]{biblatex}
 
 \DeclareFieldFormat[article]{title}{#1\par}
 \DeclareFieldFormat[inproceedings]{title}{#1\par}
@@ -279,13 +279,23 @@
   \par\vspace{0.3\baselineskip}
 }
 
+
+
 \DeclareNameFormat{author}{%
   \small\color{lightgray}%
-  \ifblank{#3}{}{#3\space}#1%
-  \ifthenelse{\value{listcount}<\value{liststop}}
-    {\addcomma\space}
-    {}%
-}
+  \ifthenelse{\value{listcount}=1}
+    {
+       \namepartfamily%
+       \ifblank{\namepartgiven}{}{\space\namepartgiven}\space
+    }
+    {
+       \ifblank{\namepartfamily}{}{\namepartfamily\space}%
+       \namepartgiven
+    }%
+    \ifthenelse{\value{listcount}<\value{liststop}}{,}{}
+  }
+
+
 
 \newcommand{\printbibsection}[2]{
   \begin{refsection}
