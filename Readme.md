@@ -5,7 +5,12 @@ Uses TikZ for the header and biblatex to print my publications and textpos for t
 
 Requires biber
 
-# License
+# TODO
+ 
+  * Add FQRNT postdoc award: 70, 000 $
+  * Add CRSNG postdoc awaer: 90, 000 $
+
+# Original license
 
 Copyright (C) 2012, Adrien Friggeri
 
