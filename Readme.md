@@ -8,7 +8,7 @@ Requires biber
 # TODO
  
   * Add FQRNT postdoc award: 70, 000 $
-  * Add CRSNG postdoc awaer: 90, 000 $
+  * Add CRSNG postdoc award: 90, 000 $
 
 # Original license
 
