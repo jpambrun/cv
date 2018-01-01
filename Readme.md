@@ -1,14 +1,13 @@
 # About
 Latest version of my CV.
 
-Uses TikZ for the header and biblatex to print my publications and textpos for the aside.
+Uses TikZ for the header and biblatex to print publications and textpos for the aside.
 
-Requires biber
+# deps
 
-# TODO
- 
-  * Add FQRNT postdoc award: 70, 000 $
-  * Add CRSNG postdoc award: 90, 000 $
+```
+sudo pacman -S texlive-most texlive-langcyrillic biber
+```
 
 # Original license
 
