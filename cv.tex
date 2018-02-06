@@ -1,25 +1,14 @@
-%!TEX TS-program = xelatex
-\def\isenglish{1}
-%\def\isprint{1}
+%TODO: add details for committee membership.
 
-\ifdefined\isprint
-  \documentclass[print]{friggeri-cv}
-\else
-  \documentclass[]{friggeri-cv}
-\fi
+\documentclass[print]{friggeri-cv}
 \addbibresource{bibliography.bib}
-%TODO add details for committee membership.
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
 \begin{document}
 
-\engfr{
 \header{jean-françois}{pambrun}{researcher | engineer | software developer}
-}{
-\header{jean-françois}{pambrun}{chercheur | ingénieur | développeur}
-}
 
 \newcommand{\eletr}{\href{http://www.etsmtl.ca/Programmes-Etudes/1er-cycle/Fiche-de-cours?Sigle=ELE747}{ele{\footnotesize747}}}
 \newcommand{\eleenv}{\href{http://www.etsmtl.ca/Programmes-Etudes/1er-cycle/Fiche-de-cours?Sigle=ELE116}{ele{\footnotesize116}}}
@@ -28,8 +17,7 @@
 
 % In the aside, each new line forces a line break
 \begin{aside}
-%    \ifdefined\isenglish\section{about}\else\section{à propos}\fi
-  \section{\engfr{about}{à propos}}
+  \section{about}
   {\small(514) 222-2085}
   {\small6783} chambord
   montréal
@@ -39,155 +27,99 @@
   \href{https://ca.linkedin.com/in/jpambrun}{linkedin://jpambrun}
   \href{http://github.com/jpambrun}{github://jpambrun}
   % \href{http://jfpb.net}{http://jfpb.net}
-  \section{\engfr{languages}{langues}}
-  \engfr{french/english}{français/anglais}
-  \section{\engfr{programming}{logiciels}}
+  \section{languages}
+  french/english
+  \section{programming}
   java, javascript
   matlab, python
   linux, git, c, c{\tiny$^{++}$}
   latex, tensorflow
-  \section{\engfr{standards}{standards}}
+  \section{standards}
   dicom, ihe, hl{\small7}
   jpeg {\small2000}, jpip
-  \section{\engfr{interests}{intérêts}}
-  \engfr{medical imaging\\image compression\\deep learning\\rendering}{imagerie médicale\\compression d'images\\apprentissage profond\\rendu}
+  \section{interests}
+  medical imaging\\image compression\\deep learning\\rendering
   ~\vspace{2cm}
-  {\footnotesize\engfr{\textdagger~ not a member of the OIQ\\\textdaggerdbl~ fast-track doctoral admission without obtaining a master's degree }{\textdagger~ non membre de l'OIQ\\\textdaggerdbl~ passage direct au doctorat sans obtenir le grade de maîtrise}}
+  {\footnotesize\textdagger~ not a member of the OIQ\\\textdaggerdbl~ fast-track doctoral admission without obtaining a master's degree}
 \end{aside}
 
 % \begin{cvfootnote}
-%   \engfr{\textdagger~ not a member of the OIQ\\\textdaggerdbl~ fast-track doctoral admission without obtaining a master's degree }{\textdagger~ non membre de l'OIQ\\\textdaggerdbl~ passage direct au doctorat sans obtenir le grade de maîtrise}
+%   \textdagger~ not a member of the OIQ\\\textdaggerdbl~ fast-track doctoral admission without obtaining a master's degree
 % \end{cvfootnote}
 
 
-\engfr{\section{education}}{\section{éducation}}
-
+\section{education}
 \begin{entrylist}
-  \engfr
-  {\entry {2011-2016} {Ph.D. in electrical engineering} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{improving medical image compression and transmission}}}
-  {\entry {2011-2016} {Ph.D. en génie électrique} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{optimisation de la compression et de la transmission d'images médicales}}}
+  \entry {2011-2016} {Ph.D. in electrical engineering} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{improving medical image compression and transmission}}
 
-  \engfr
-  {\entry {2009-2010} {M.Sc. in electrical engineering (incomplete\textsuperscript{\tiny\textdaggerdbl})} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{evaluation of the diagnostic quality of lossy compressed medical images}}}
-  {\entry {2009-2010} {M.Sc. en génie électrique (incomplet\textsuperscript{\tiny\textdaggerdbl})} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{évaluation des pertes liées à la compression d'images médicales}}}
+  \entry {2009-2010} {M.Sc. in electrical engineering (incomplete\textsuperscript{\tiny\textdaggerdbl})} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{evaluation of the diagnostic quality of lossy compressed medical images}}
+  
+  \entry {2005-2009} {B.ing. in electrical engineering} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{information technologies and telecommunication}}
 
-  \engfr
-  {\entry {2005-2009} {B.ing. in electrical engineering} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{information technologies and telecommunication}}}
-  {\entry {2005-2009} {B.ing. en génie électrique} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{concentration technologie de l'information et télécommunications}}}
-
-  %\engfr
-  %{\entry {2001-2005} {Diploma of college studies in electrical engineering} {Cégep de l’Outaouais} {\emph{computerized system technologies}}}
-  %{\entry {2001-2005} {Diplôme d'études collégiales en génie électrique} {Cégep de l’Outaouais} {\emph{concentration technologie de systèmes ordinés}}}
+  %\entry {2001-2005} {Diploma of college studies in electrical engineering} {Cégep de l’Outaouais} {\emph{computerized system technologies}}
 \end{entrylist}
 
 
-% \cventry{2008--2009}{Concepteur de matériel didactique}{École de technologie supérieure {\scriptsize (ÉTS)}}{}{}{
-% Responsable de l’élaboration des exercices et des outils nécessaires au bon déroulement des laboratoires du cours Systèmes répartis dans le domaine de la santé ((gts\footnotesize840})).
-% \begin{itemize}
-%   \item Assembler/développer des logiciels de type clients/serveurs suivant les spécifications et standards HL7 et DICOM pour les dossiers patients
-%   \item Concevoir, créer et mettre au point les énoncés de laboratoire et les méthodes nécessaires à l’évaluation des étudiants
-% \end{itemize}}
+% % \cventry{2008--2009}{Concepteur de matériel didactique}{École de technologie supérieure {\scriptsize (ÉTS)}}{}{}{
+% % Responsable de l’élaboration des exercices et des outils nécessaires au bon déroulement des laboratoires du cours Systèmes répartis dans le domaine de la santé ((gts\footnotesize840})).
+% % \begin{itemize}
+% %   \item Assembler/développer des logiciels de type clients/serveurs suivant les spécifications et standards HL7 et DICOM pour les dossiers patients
+% %   \item Concevoir, créer et mettre au point les énoncés de laboratoire et les méthodes nécessaires à l’évaluation des étudiants
+% % \end{itemize}}
 
-\engfr{\section{experience}}{\section{expérience}}
-
-\begin{entrylist}
-  \engfr
-  {\entry {2016 (dec-)} {software developer} {nucleus.io} {\emph{cloud-based diagnostic workstation with client-side MPR}}}
-  {\entry {2016 (dec-)} {développeur logiciel} {nucleus.io} {\emph{station diagnostique nuagique avec reconstruction MPR}}}
-
-  \engfr
-  {\entry {2016 (jun-dec)} {postdoctoral fellow} {CHUM research centre} {\emph{MR-TRUS fusion and segmentation using deep neural networks}}}
-  {\entry {2016 (jun-dec)} {stagiaire postdoctoral} {Centre de recherche du CHUM} {\emph{fusion et segmentation IRM-TRUS à l'aide de l'apprentissage profond}}}
-
-
-  \engfr
-  {\entry {2009-2016} {lecturer} {École polytechnique de montréal \& {\scriptsize ÉTS}} {\emph{procedural programming (\infmat)\\\emph{software development environment (\eleenv)}\\image processing and analysis (\eletr)}}}
-  {\entry {2009-2016} {chargé de cours} {École polytechnique de montréal \& {\scriptsize ÉTS}} {\emph{programmation procédurale (\infmat)\\\emph{environnement de développement de logiciels (\eleenv)}\\analyse et traitement d'images (\eletr)}}}
-
-
-  % \engfr
-  % {\entry {2016 (sep-dec)} {lecturer} {École polytechnique de montréal} {\emph{procedural programming (\infmat)}}}
-  % {\entry {2016 (sep-dec)} {chargé de cours} {École polytechnique de montréal} {\emph{programmation procédurale (\infmat)}}}
-
-  % \engfr
-  % {\entry {2009-2014} {lecturer} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{software development environment (\eleenv)}\\image processing and analysis (\eletr) }}
-  % {\entry {2009-2014} {chargé de cours} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{environnement de développement de logiciels (\eleenv)}\\analyse et traitement d'images (\eletr)}}
-
-  \engfr
-  {\entry {2007-2014} {teaching assistants} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{healthcare distributed systems (\gtssys)\\software development environment (\eleenv)\\image processing and analysis (\eletr)}}}
-  {\entry {2007-2014} {chargé de laboratoire} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{systèmes répartis dans le domaine de la santé (\gtssys)\\environnement de développement de logiciels (\eleenv)\\analyse et traitement d'images (\eletr)}}}
-
-  \engfr
-  {\entry {2009 (jan-sep)} {software developer} {\scriptsize{CAE} inc.} {\emph{head-up display simulation for military flight simulators}}}
-  {\entry {2009 (jan-sep)} {développeur logiciel} {\scriptsize{CAE} inc.} {\emph{simulation d'affichage tête haute pour simulateurs de vol militaire}}}
-
-  \engfr
-  {\entry {2006-2008} {research assistant} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{implementation of a standard compliance validation tool for hl{\small7}v{\small3}\\implementation and evaluation of a medical image streaming framework}}}
-  {\entry {2006-2008} {auxiliaire de recherche} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{développement d'un outil de validation de conformité au standard hl{\small7}v{\small3}.\\Implémentation et évaluation d'un système de <<streaming>> d'images médicales.}}}
-\end{entrylist}
-
-\engfr{\section{awards}}{\section{récompenses}}
+\section{experience}
 
 \begin{entrylist}
+  \entry {2016 (dec-)} {software developer} {nucleus.io} {\emph{cloud-based diagnostic workstation with client-side MPR}}
 
-  \engfr
-  {\entry {2017} {{\small NSERC} postdoctoral fellowship (declined)} {90,000\$} {\vspace{-3mm}}}
-  {\entry {2017} {bourse d’étude postdoctorale du {\small CRSNG} (décliné)} {90,000\$} {\vspace{-3mm}}}
+  \entry {2016 (jun-dec)} {postdoctoral fellow} {CHUM research centre} {\emph{MR-TRUS fusion and segmentation using deep neural networks}}
 
-  \engfr
-  {\entry {2017} {{\small FRQNT} postdoctoral fellowship (declined)} {70,000\$} {\vspace{-3mm}}}
-  {\entry {2017} {bourse d’étude postdoctorale du {\small FRQNT} (décliné)} {70,000\$} {\vspace{-3mm}}}
 
-  \engfr
-  {\entry {2016} {{\small GRSTB} postdoctoral fellowship} {18,000\$} {\vspace{-3mm}}}
-  {\entry {2016} {bourse d’étude postdoctorale du {\small GRSTB}} {18,000\$} {\vspace{-3mm}}}
+  \entry {2009-2016} {lecturer} {École polytechnique de montréal \& {\scriptsize ÉTS}} {\emph{procedural programming (\infmat)\\\emph{software development environment (\eleenv)}\\image processing and analysis (\eletr)}}
+  
 
-  \engfr
-  {\entry {2011} {{\small NSERC} doctoral Alexander-Graham-Bell scholarship} {105,000\$} {\vspace{-3mm}}}
-  {\entry {2011} {bourse d’étude supérieure Alexander-Graham-Bell du {\small CRSNG}} {105,000\$} {\vspace{-3mm}}}
+  % \entry {2016 (sep-dec)} {lecturer} {École polytechnique de montréal} {\emph{procedural programming (\infmat)}}
 
-  \engfr
-  {\entry {2011} {{\small ÉTS} excellence graduate student scholarship} {60,000\$} {\vspace{-3mm}}}
-  {\entry {2011} {bourse d'excellence pour les diplômés de 1er cycle de l'ÉTS} {60,000\$} {\vspace{-3mm}}}
+  % \entry {2009-2014} {lecturer} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{software development environment (\eleenv)}\\image processing and analysis (\eletr) }
+  
+  \entry {2007-2014} {teaching assistants} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{healthcare distributed systems (\gtssys)\\software development environment (\eleenv)\\image processing and analysis (\eletr)}}
+  
+  \entry {2009 (jan-sep)} {software developer} {\scriptsize{CAE} inc.} {\emph{head-up display simulation for military flight simulators}}
 
-  \engfr
-  {\entry {2011} {{\small FRQNT} doctoral research scholarship (declined)} {60,000\$} {\vspace{-3mm}}}
-  {\entry {2011} {bourse de doctorat en recherche du {\small FRQNT} (décliné)} {60,000\$} {\vspace{-3mm}}}
-
-  \engfr
-  {\entry {2009} {{\small FRQNT} master's research scholarship} {30,000\$} {\vspace{-3mm}}}
-  {\entry {2009} {bourse de maîtrise en recherche du {\small FRQNT}} {30,000\$} {\vspace{-3mm}}}
-
-  \engfr
-  {\entry {2006} {{\small NSERC} undergraduate student research awards} {4,500\$} {\vspace{-3mm}}}
-  {\entry {2006} {bourse de recherche de 1er cycle du {\small CRSNG}} {4,500\$} {\vspace{-3mm}}}
+  \entry {2006-2008} {research assistant} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{implementation of a standard compliance validation tool for hl{\small7}v{\small3}\\implementation and evaluation of a medical image streaming framework}}
 \end{entrylist}
 
-%\engfr{\section{committee and board memberships}}{\section{comités et conseil d'administration}}
-%\begin{entrylist}
-%  \engfr
-%  {\entry {2013-2016} {board member of an {\small NPO}} {Association étudiante de l'{\scriptsize ÉTS}} {vice-president of services\\ academic commission student representative \\ disciplinary committee student representative}}
-%  {\entry {2013-2016} {administrateur d'un {\small OBNL}} {Association étudiante de l'{\scriptsize ÉTS}} {vice-président aux services\\représentant étudiant à la commission des études\\représentant étudiant au comité de discipline}}
-%\end{entrylist}
+\section{awards}
+\begin{entrylist}
+  \entry {2017} {{\small NSERC} postdoctoral fellowship (declined)} {90,000\$} {\vspace{-3mm}}
+  \entry {2017} {{\small FRQNT} postdoctoral fellowship (declined)} {70,000\$} {\vspace{-3mm}}
+  \entry {2016} {{\small GRSTB} postdoctoral fellowship} {18,000\$} {\vspace{-3mm}}
+  \entry {2011} {{\small NSERC} doctoral Alexander-Graham-Bell scholarship} {105,000\$} {\vspace{-3mm}}
+  \entry {2011} {{\small ÉTS} excellence graduate student scholarship} {60,000\$} {\vspace{-3mm}}
+  \entry {2011} {{\small FRQNT} doctoral research scholarship (declined)} {60,000\$} {\vspace{-3mm}}
+  \entry {2009} {{\small FRQNT} master's research scholarship} {30,000\$} {\vspace{-3mm}}
+  \entry {2006} {{\small NSERC} undergraduate student research awards} {4,500\$} {\vspace{-3mm}}
+ \end{entrylist}
+
+% %\section{committee and board memberships}}
+% %\begin{entrylist}
+% %  \entry {2013-2016} {board member of an {\small NPO}} {Association étudiante de l'{\scriptsize ÉTS}} {vice-president of services\\ academic commission student representative \\ disciplinary committee student representative}
+% %\end{entrylist}
+
 \newpage
 
 
-\engfr{\section{publications}}{\section{publications}}
+\section{publications}
 \vspace{-3mm}
 \newrefcontext[sorting=chronological]
 \nocite{*}
 \printbibliography[
   type=article,
-  title={\ifdefined\isenglish articles in peer-reviewed journals\else articles de journaux évalués par les pairs\fi},
+  title={articles in peer-reviewed journals},
   heading=subbibliography]
 \printbibliography[
   type=inproceedings,
-  title={\ifdefined\isenglish international peer-reviewed conferences/proceedings \else articles de conférences internationales évalués par les pairs \fi},
+  title={international peer-reviewed conferences/proceedings},
   heading=subbibliography]
-% \printbibsection{article}{\ifdefined\isenglish articles in peer-reviewed journals\else articles de journaux évalués par les pairs\fi}
-% \begin{refsection}
-%   \nocite{*}
-%   \printbibliography[type=inproceedings, title={\ifdefined\isenglish international peer-reviewed conferences/proceedings \else articles de conférences internationales évalués par les pairs \fi}, heading=subbibliography]
-% \end{refsection}
 
 \end{document}
