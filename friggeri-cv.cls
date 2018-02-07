@@ -155,9 +155,15 @@
     \textbf{#2}%
     \hfill%
     {\footnotesize\color{lightgray} #3}\\%
-    #4\vspace{\parsep}%
+    \begin{em}#4\end{em}\vspace{5mm}%
   }\\}
-
+\newcommand{\awardentry}[4]{%
+  {\small#1}&\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize\color{lightgray} #3}\\%
+    \begin{em}#4\end{em}\vspace{\parsep}%
+  }\\}
 
 %%%%%%%%%%%%%%
 % Side block %

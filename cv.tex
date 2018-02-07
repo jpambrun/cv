@@ -1,11 +1,15 @@
 %TODO: add details for committee membership.
 
 \documentclass[print]{friggeri-cv}
+\usepackage{enumitem}
 \addbibresource{bibliography.bib}
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
+\renewcommand\labelitemi{$\cdot$}
+\setlist[itemize]{leftmargin=*}
+
 \begin{document}
 
 \header{jean-françois}{pambrun}{researcher | engineer | software developer}
@@ -50,63 +54,135 @@
 
 \section{education}
 \begin{entrylist}
-  \entry {2011-2016} {Ph.D. in electrical engineering} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{improving medical image compression and transmission}}
+  \entry {2011-2016} 
+  {Ph.D. in electrical engineering} 
+  {École de technologie supérieure {\scriptsize (ÉTS)}}
+  {improving medical image compression and transmission
+  \begin{itemize}
+    \item develop a novel image quality metric adapted to medical imaging
+    \item propose a novel {\footnotesize JPEG 2000} bit allocation mechanism
+    \item improve streaming of large volumes ({\footnotesize CT}, {\footnotesize MR}, etc.)
+  \end{itemize}}
 
-  \entry {2009-2010} {M.Sc. in electrical engineering (incomplete\textsuperscript{\tiny\textdaggerdbl})} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{evaluation of the diagnostic quality of lossy compressed medical images}}
-  
-  \entry {2005-2009} {B.ing. in electrical engineering} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{information technologies and telecommunication}}
+  \entry
+  {2009-2010}
+  {M.Sc. in electrical engineering (incomplete\textsuperscript{\tiny\textdaggerdbl})}
+  {École de technologie supérieure {\scriptsize (ÉTS)}}
+  {evaluation of the diagnostic quality of lossy compressed medical images
+  \begin{itemize}
+    \item research medical image quality assessment and diagnostic losslessness
+    \item quantify the {\footnotesize CT} acquisition parameters that affect compressibility
+  \end{itemize}}
 
-  %\entry {2001-2005} {Diploma of college studies in electrical engineering} {Cégep de l’Outaouais} {\emph{computerized system technologies}}
+  \entry {2005-2009} {B.ing. in electrical engineering}
+  {École de technologie supérieure {\scriptsize (ÉTS)}}
+  {\emph{information technologies and telecommunication}}
+
 \end{entrylist}
 
-
-% % \cventry{2008--2009}{Concepteur de matériel didactique}{École de technologie supérieure {\scriptsize (ÉTS)}}{}{}{
-% % Responsable de l’élaboration des exercices et des outils nécessaires au bon déroulement des laboratoires du cours Systèmes répartis dans le domaine de la santé ((gts\footnotesize840})).
-% % \begin{itemize}
-% %   \item Assembler/développer des logiciels de type clients/serveurs suivant les spécifications et standards HL7 et DICOM pour les dossiers patients
-% %   \item Concevoir, créer et mettre au point les énoncés de laboratoire et les méthodes nécessaires à l’évaluation des étudiants
-% % \end{itemize}}
 
 \section{experience}
 
 \begin{entrylist}
-  \entry {2016 (dec-)} {software developer} {nucleus.io} {\emph{cloud-based diagnostic workstation with client-side MPR}}
+  \entry {2016 (dec-)}
+  {software developer} {nucleus.io}
+  {cloud-based diagnostic workstation with client-side {\small MPR}
+  \begin{itemize}
+    \item design and implement a client-side multi-planar reconstruction renderer
+    \item design and implement a 3d compression algorithm for fast streaming
+    \item design and implement annotation tools such as length, Cobb angle, etc 
+    \item write highly optimized code using the latest web technologie
+    \item ensure support for {\small CT}, {\small MR}, {\small PET}, ultrasound, large tomosynthesis, etc 
+  \end{itemize}}
 
-  \entry {2016 (jun-dec)} {postdoctoral fellow} {CHUM research centre} {\emph{MR-TRUS fusion and segmentation using deep neural networks}}
+  \entry {2016 (jun-dec)} 
+  {postdoctoral fellow}
+  {CHUM research centre}
+  {improve image-guided prostate cancer brachytherapy treatments
+  \begin{itemize}
+    \item implement MR-Ultrasound fusion and segmentation using machine learning
+    \item study the impact of dual energy{\small  CT} ({\small DECT}) on current fusion algorithms
+    \item evaluate an experimental non-rigid {\small MR-UR} fusion workflow in the {\small OR}
+  \end{itemize}}
 
 
-  \entry {2009-2016} {lecturer} {École polytechnique de montréal \& {\scriptsize ÉTS}} {\emph{procedural programming (\infmat)\\\emph{software development environment (\eleenv)}\\image processing and analysis (\eletr)}}
+  \entry {2016 (sep-dec)}
+  {lecturer}
+  {École polytechnique de montréal} 
+  {procedural programming (\infmat)
+  \begin{itemize}
+    \item teach introductory procedural programming using {\small MATLAB}
+  \end{itemize}}
+
+  \entry {2009-2016} 
+  {lecturer}
+  {École de technologie supérieure {\scriptsize (ÉTS)}}
+  {software development environment (\eleenv)
+  \begin{itemize}
+    \item teach object oriented programming with {\small JAVA}
+    \item discuss development tools such as {\small IDE}s, debuggers, git  
+  \end{itemize}
+  image processing and analysis (\eletr)
+    \begin{itemize}
+    \item teach image processing techniques using {\small MATLAB}
+    \item discuss topics such as {\small FFT}s, edge detectors, compression, etc.  
+  \end{itemize}
+  }
+\end{entrylist}
+
+\clearpage
+\header{jean-françois}{pambrun}{researcher | engineer | software developer}
+
+
+\section{experience (cont.)}
+\begin{entrylist}
+  \entry {2007-2014}
+  {teaching assistants}
+  {École de technologie supérieure {\scriptsize (ÉTS)}}
+  {\emph{healthcare distributed systems (\gtssys)
+  \begin{itemize}
+    \item supervise and grade graduate student lab assignements 
+    \item discuss topics such as {\small HL7}, {\small IHE} and {\small DICOM}  
+  \end{itemize}
+  software development environment (\eleenv)\\
+  image processing and analysis (\eletr)}}
   
+  \entry {2009 (jan-sep)}
+  {software developer} {\scriptsize{CAE} inc.}
+  {head-up display simulation for military flight simulators
+  \begin{itemize}
+    \item implement a c/c++ modules to stimulate and simulate avionic systems
+    \item implement an {\small O}pen{\small GL} solution to simulate a {\small HUD}
+    \item work with clients to fix issues and achieve acceptance
+  \end{itemize}
+  }
 
-  % \entry {2016 (sep-dec)} {lecturer} {École polytechnique de montréal} {\emph{procedural programming (\infmat)}}
-
-  % \entry {2009-2014} {lecturer} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{software development environment (\eleenv)}\\image processing and analysis (\eletr) }
-  
-  \entry {2007-2014} {teaching assistants} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{healthcare distributed systems (\gtssys)\\software development environment (\eleenv)\\image processing and analysis (\eletr)}}
-  
-  \entry {2009 (jan-sep)} {software developer} {\scriptsize{CAE} inc.} {\emph{head-up display simulation for military flight simulators}}
-
-  \entry {2006-2008} {research assistant} {École de technologie supérieure {\scriptsize (ÉTS)}} {\emph{implementation of a standard compliance validation tool for hl{\small7}v{\small3}\\implementation and evaluation of a medical image streaming framework}}
+  \entry {2006-2008}
+  {research assistant}
+  {École de technologie supérieure {\scriptsize (ÉTS)}}
+  {implementation of a standard compliance validation tool for hl{\small7}v{\small3}
+  implementation and evaluation of a medical image streaming framework}}
 \end{entrylist}
 
 \section{awards}
 \begin{entrylist}
-  \entry {2017} {{\small NSERC} postdoctoral fellowship (declined)} {90,000\$} {\vspace{-3mm}}
-  \entry {2017} {{\small FRQNT} postdoctoral fellowship (declined)} {70,000\$} {\vspace{-3mm}}
-  \entry {2016} {{\small GRSTB} postdoctoral fellowship} {18,000\$} {\vspace{-3mm}}
-  \entry {2011} {{\small NSERC} doctoral Alexander-Graham-Bell scholarship} {105,000\$} {\vspace{-3mm}}
-  \entry {2011} {{\small ÉTS} excellence graduate student scholarship} {60,000\$} {\vspace{-3mm}}
-  \entry {2011} {{\small FRQNT} doctoral research scholarship (declined)} {60,000\$} {\vspace{-3mm}}
-  \entry {2009} {{\small FRQNT} master's research scholarship} {30,000\$} {\vspace{-3mm}}
-  \entry {2006} {{\small NSERC} undergraduate student research awards} {4,500\$} {\vspace{-3mm}}
+  \awardentry {2017} {{\small NSERC} postdoctoral fellowship (declined)} {90,000\$} {\vspace{-3mm}}
+  \awardentry {2017} {{\small FRQNT} postdoctoral fellowship (declined)} {70,000\$} {\vspace{-3mm}}
+  \awardentry {2016} {{\small GRSTB} postdoctoral fellowship} {18,000\$} {\vspace{-3mm}}
+  \awardentry {2011} {{\small NSERC} doctoral Alexander-Graham-Bell scholarship} {105,000\$} {\vspace{-3mm}}
+  \awardentry {2011} {{\small ÉTS} excellence graduate student scholarship} {60,000\$} {\vspace{-3mm}}
+  \awardentry {2011} {{\small FRQNT} doctoral research scholarship (declined)} {60,000\$} {\vspace{-3mm}}
+  \awardentry {2009} {{\small FRQNT} master's research scholarship} {30,000\$} {\vspace{-3mm}}
+  \awardentry {2006} {{\small NSERC} undergraduate student research awards} {4,500\$} {\vspace{-3mm}}
  \end{entrylist}
+\vspace{2mm}
 
-% %\section{committee and board memberships}}
-% %\begin{entrylist}
-% %  \entry {2013-2016} {board member of an {\small NPO}} {Association étudiante de l'{\scriptsize ÉTS}} {vice-president of services\\ academic commission student representative \\ disciplinary committee student representative}
-% %\end{entrylist}
+\section{committee and board memberships}}
+\begin{entrylist}
+ \entry {2013-2016} {board member of an {\small NPO}} {Association étudiante de l'{\scriptsize ÉTS}} {vice-president of services\\ academic commission student representative \\ disciplinary committee student representative}
+\end{entrylist}
 
-\newpage
+\clearpage
 
 
 \section{publications}
