@@ -52,21 +52,17 @@
 % Fonts %
 %%%%%%%%%
 
-%\usepackage[T1]{fontenc}
-\RequirePackage{fontspec}
-\RequirePackage[utf8]{inputenc}
-\RequirePackage{lato}
-\RequirePackage{microtype}
-\RequirePackage{textcomp}
+\RequirePackage[quiet]{fontspec}
+\RequirePackage[math-style=TeX]{unicode-math}
 
-\DeclareTextCommandDefault{\nobreakspace}{\leavevmode\nobreak\ }
+\newfontfamily\bodyfont[]{Roboto}
+\newfontfamily\thinfont[]{Roboto Thin}
+\newfontfamily\headingfont[]{Roboto Condensed Bold}
 
-\newcommand{\bodyfont}[0]{\usefont{T1}{fla}{b}{n}}
-\newcommand{\thinfont}[0]{\color{red}\usefont{T1}{fla}{l}{n}}
-\newcommand{\headingfont}[0]{\usefont{T1}{fla}{eb}{n}}
-\renewcommand{\seriesdefault}{l}
-\renewcommand{\rmdefault}{fla}
-\renewcommand{\encodingdefault}{T1}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Roboto Light}
+
+%\setmathfont{XITS Math}
 %%%%%%%%%%
 % Header %
 %%%%%%%%%%

@@ -23,7 +23,6 @@
 \begin{aside}
   \section{about}
   {\small(514) 222-2085}
-  {\small6783} chambord
   montréal
   canada
   ~
@@ -39,8 +38,10 @@
   linux, git, c, c{\tiny$^{++}$}
   latex, tensorflow
   azure, mongodb
-  node, meteor
-  docker
+  docker, gcs
+  kubernetes
+  node, sql
+  postgres
   \section{standards}
   dicom, ihe, hl{\small7}
   jpeg {\small2000}, jpip
@@ -49,6 +50,9 @@
   image compression
   machine learning
   image analysis
+  infrastructure
+  performance
+  scalability
   rendering
   ~\vspace{2cm}
   {\footnotesize\textdagger~ not a member of the OIQ\\\textdaggerdbl~ fast-track phd admission}
@@ -94,8 +98,39 @@
 \section{experience}
 
 \begin{entrylist}
-  \entry {2016 (dec-)}
-  {software developer} {nucleus.io}
+  \entry {2020-present}
+  {Principal Architect} {Change Healthcare}
+  {cloud-based PACS performance and scalability
+  \begin{itemize}
+    \item lead a cross-cutting team focused on full-stack performance
+    \item architect cloud-native PACS components
+    \item iteratively profile and improve client and server side performance
+    \item define and measure key performance indicators
+    \item implement distributed tracing and other instrumentation to track \\ performance across users and releases
+    \item implement websocket-based medical image streaming
+    \item skills: node, kubernetes, gcp, chromium, opentelemetry, dicom
+  \end{itemize}}
+
+  \entry {2018-2020}
+  {Data Scientist} {Change Healthcare}
+  {FDA-approved pixel-based body-part classification for more relevant priors 
+  \begin{itemize}
+    \item work with academic and clinical partners to acquire anonymized data
+    \item design data ingestion and cleaning pipelines
+    \item implement 3d bounding box dicom labeling tool across frames of reference
+    \item design machine learning models
+    \item train and validate models with proper data sampling
+    \item skills: python, javascript, tensorflow, postgres, machine learning, k8s, gcp
+  \end{itemize}}
+
+\end{entrylist}
+
+\clearpage
+% \header{jean-françois}{pambrun}{researcher | engineer | software developer}
+\section{experience (cont.)}
+\begin{entrylist}
+  \entry {2016-2018}
+  {Software Developer} {nucleus.io}
   {cloud-based diagnostic workstation with client-side {\small MPR}
   \begin{itemize}
     \item design and implement a client-side multi-planar reconstruction renderer
@@ -107,7 +142,7 @@
   \end{itemize}}
 
   \entry {2016 (jun-dec)}
-  {postdoctoral fellow}
+  {Postdoctoral Fellow}
   {CHUM research centre}
   {improve image-guided prostate cancer brachytherapy treatments
   \begin{itemize}
@@ -117,55 +152,50 @@
     \item skills: python, tensorflow, machine learning, registration, segmentation
   \end{itemize}}
 
-  \entry {2016 (sep-dec)}
-  {lecturer}
-  {École polytechnique de montréal}
-  {procedural programming (\infmat)
-  \begin{itemize}
-    \item teach introductory procedural programming using matlab
-    \item skills: matlab, communication, leadership
-  \end{itemize}}
+  % \entry {2016 (sep-dec)}
+  % {Lecturer}
+  % {École polytechnique de montréal}
+  % {procedural programming (\infmat)
+  % \begin{itemize}
+  %   \item teach introductory procedural programming using matlab
+  %   \item skills: matlab, communication, leadership
+  % \end{itemize}}
 
-\end{entrylist}
 
-\clearpage
-% \header{jean-françois}{pambrun}{researcher | engineer | software developer}
-\section{experience (cont.)}
-\begin{entrylist}
-  \entry {2009-2016}
-  {lecturer}
-  {École de technologie supérieure {\scriptsize (ÉTS)}}
-  {software development (\eleenv)
-  \begin{itemize}
-    \item teach object oriented programming using java including\\topics such as ide, debuggers, source version control
-  \end{itemize}
-  image processing and analysis (\eletr)
-    \begin{itemize}
-    \item teach image processing techniques using matlab including\\topics such as fft, edge detectors and compression
-  \end{itemize}
-  \begin{itemize}
-    \item skills: java, matlab, image processing, oop, communication, leadership
-  \end{itemize}
+%   \entry {2009-2016}
+%   {Lecturer}
+%   {École de technologie supérieure {\scriptsize (ÉTS)}}
+%   {software development (\eleenv)
+%   \begin{itemize}
+%     \item teach object oriented programming using java including\\topics such as ide, debuggers, source version control
+%   \end{itemize}
+%   image processing and analysis (\eletr)
+%     \begin{itemize}
+%     \item teach image processing techniques using matlab including\\topics such as fft, edge detectors and compression
+%   \end{itemize}
+%   \begin{itemize}
+%     \item skills: java, matlab, image processing, oop, communication, leadership
+%   \end{itemize}
 
-  }
+%   }
 
-  \entry {2007-2014}
-  {teaching assistants}
-  {École de technologie supérieure {\scriptsize (ÉTS)}}
-  {\emph{healthcare distributed systems (\gtssys)
-  \begin{itemize}
-    \item supervise and grade graduate student lab assignments
-    \item present topics such as hl7, ihe and dicom
-  \end{itemize}
-  software development environment (\eleenv)\\
-  image processing and analysis (\eletr)}
-  \begin{itemize}
-    \item skills: dicom, hl7, healthcare systems, communication, leadership
-  \end{itemize}
-  }
+  % \entry {2007-2014}
+  % {Teaching Assistants}
+  % {École de technologie supérieure {\scriptsize (ÉTS)}}
+  % {\emph{healthcare distributed systems (\gtssys)
+  % \begin{itemize}
+  %   \item supervise and grade graduate student lab assignments
+  %   \item present topics such as hl7, ihe and dicom
+  % \end{itemize}
+  % software development environment (\eleenv)\\
+  % image processing and analysis (\eletr)}
+  % \begin{itemize}
+  %   \item skills: dicom, hl7, healthcare systems, communication, leadership
+  % \end{itemize}
+  % }
 
   \entry {2009 (jan-sep)}
-  {software developer} {\scriptsize{CAE} inc.}
+  {Software Developer} {\scriptsize{CAE} inc.}
   {head-up display simulation for military flight simulators
   \begin{itemize}
     \item implement c/c++ modules to stimulate and simulate avionic systems
@@ -176,7 +206,7 @@
   }
 
   \entry {2006-2008}
-  {research assistant}
+  {Research Assistant}
   {École de technologie supérieure {\scriptsize (ÉTS)}}
   {implementation of a standard compliance validation tool for hl{\small7}v{\small3}
   \begin{itemize}
