@@ -40,8 +40,11 @@
   azure, mongodb
   docker, gcs
   kubernetes
+  aws, spark
   node, sql
+  deltalake
   postgres
+  trino
   \section{standards}
   dicom, ihe, hl{\small7}
   jpeg {\small2000}, jpip
@@ -98,7 +101,17 @@
 \section{experience}
 
 \begin{entrylist}
-  \entry {2020-present}
+  \entry {2023-present}
+  {Principal Data Platform Engineer} {VIDA Diagnostics}
+  {Imaging and clinical information datalake for ML and AI
+  \begin{itemize}
+    \item lead the implementation of a cloud-based datalake for clinical data
+    \item contribute to the implementation of ETL pipelines
+    \item design and implement a data platform for machine learning
+    \item skills: aws, spark, python, kubernetes, deltalake, trino
+  \end{itemize}}
+
+  \entry {2020-2023}
   {Principal Architect} {Change Healthcare}
   {cloud-based PACS lead architect
   \begin{itemize}
@@ -113,7 +126,7 @@
 
   \entry {2018-2020}
   {Data Scientist} {Change Healthcare}
-  {FDA-approved pixel-based body-part classification for more relevant priors 
+  {FDA-approved pixel-based body-part classification for more relevant priors
   \begin{itemize}
     \item work with academic and clinical partners to acquire anonymized data
     \item design data ingestion and cleaning pipelines
@@ -138,7 +151,7 @@
     \item design and implement annotation tools such as length, cobb angle, etc
     \item write highly optimized code using the latest web technologies
     \item ensure support for ct, mr, pet, ultrasound, large tomosynthesis, etc
-    \item skills: javascript, nosql, mongodb, python, node, webgl, rendering, docker
+    \item skills: javascript, nosql, mongodb, python, node, webgl, rendering, docker, azure
   \end{itemize}}
 
   \entry {2016 (jun-dec)}
@@ -246,6 +259,10 @@
 \vspace{-3mm}
 \newrefcontext[sorting=chronological]
 \nocite{*}
+\printbibliography[
+  type=misc,
+  title={patents},
+  heading=subbibliography]
 \printbibliography[
   type=article,
   title={articles in peer-reviewed journals},
